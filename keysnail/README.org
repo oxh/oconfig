@@ -37,7 +37,8 @@
 其实 emacs 就是一个 [[https://www.zhihu.com/question/19858252/answer/74193157][lisp方言]] 的解释器。熟悉 emacs 的人都知道其可定制性很强，它的一个功能是一个函数，热键是调用函数的一种方式 。在 emacs 里， [[https://www.zhihu.com/question/20846396/answer/17161629][光标的左移]] 都一个函数。所以别说加个脚踏板了，如果有廉价的眼球感应元件，你转转眼球就可以写代码了，自己感受，就不多说了。
 #+BEGIN_QUOTE
 Stallman他们觉得这个想法简直屌炸天！就沿着这个思路重写 Emacs，但并不是所有平台都有成熟的 Lisp 实现，如果基于现成的 Lisp，那跨平台就变成吹牛了，同时底层的编辑性能也会严重依赖这个 Lisp 实现。于是他们决定用C语言开发一个跨平台的 Lisp 解释器——Emacs Lisp。这样既能在所有平台上用统一的Lisp方言来写 Emacs 扩展，又能兼顾性能，多NB的一件事！
-
+#+END_QUOTE
+#+BEGIN_QUOTE
 如果你问Emacs和Vim从设计上「谁更牛」，我还是认为Emacs更牛，虽然大体上我是一个Vim用户。因为Emacs下就连「前进一个字符」这种基本操作，其实都是执行了一个类似forward-one-character的函数。当时了解到这一点，还是挺震撼的。换句话说Emacs第一是几乎所有操作都是可编程的，二是elisp相比vimscript是更加强大的语言。
 #+END_QUOTE
 而在 firefox 里貌似也是一回事，在配置文件中就是一个连续的热键调用一个函数的形式，所以你修改起来很容易。
