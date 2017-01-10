@@ -1,18 +1,18 @@
 * KeySnail
 + 自制目录 :: 由于GitHub上的README展示文档不支持目录,做了一个简单目录
-  1. [[https://github.com/oxh/oconfig/tree/master/keysnail#Firefox-相关扩展][Firefox 相关扩展]] :: 描述1
-  2. [[https://github.com/oxh/oconfig/tree/master/keysnail#KeySnail-内置插件][KeySnail 内置插件]] :: 描述2
-  3. [[https://github.com/oxh/oconfig/tree/master/keysnail#开始使用我的配置][开始使用我的配置]] :: 一二三2
+  1. [[https://github.com/oxh/oconfig/tree/master/keysnail#firefox-相关扩展][Firefox 相关扩展]]
+  2. [[https://github.com/oxh/oconfig/tree/master/keysnail#keysnail-内置插件][KeySnail 内置插件]]
+  3. [[https://github.com/oxh/oconfig/tree/master/keysnail#开始使用我的配置][开始使用我的配置]]
 
 
-这是关于该配置的本地信息
-+ 环境 :: 描述3
-  - linux 4.4.36 :: 描述5
-  - firefox 50.1.0
-+ 文件名
-  - ~/.keysnail.js
-+ 更新时间
-  - <2017-01-10 Tue>
++ 比对使用 :: 这是关于该配置的我的本地信息
+  + 环境
+    - linux 4.4.36
+    - firefox 50.1.0
+  + 文件名
+    - ~/.keysnail.js
+  + 更新时间
+    - <2017-01-10 Tue>
 
 ** Firefox 相关扩展
 [[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_01.png?raw=true]]
