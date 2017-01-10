@@ -17,8 +17,7 @@
 ** Firefox 相关扩展
 [[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_01.png?raw=true]] \\
 [[https://addons.mozilla.org/en-US/firefox/addon/s3menu-wizard/][Menu Wizard]] 是一个搭配 [[https://github.com/mooz/keysnail/wiki][KeySnail]] 使用的扩展，本主题下使用它的目的是禁用 firefox 默认的快捷键。仅需把两项勾选取消即可，如图所示。 \\
-[[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_02.png?raw=true]]
-** KeySnail 内置插件
+[[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_02.png?raw=true]] \\
 这四个插件均在该配置文件用使用，也是实现 [[https://github.com/mooz/keysnail/wiki][KeySnail]] 一些基本功能的重要插件， [[https://github.com/mooz/keysnail/wiki/plugin][安装]] 这些插件很简单，不再赘述。 \\
 [[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_03.png?raw=true]]
 ** 开始使用我的配置
