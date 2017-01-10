@@ -1,13 +1,12 @@
 * KeySnail
 这是关于该配置的本地信息。
-
-环境            : linux 4.4.36
-
-                  firefox 50.1.0
-
-文件名          : ~/.keysnail.js
-
-更新时间        : <2017-01-10 Tue>
++ 环境
+  - linux 4.4.36
+  - firefox 50.1.0
++ 文件名
+  - ~/.keysnail.js
++ 更新时间
+  - <2017-01-10 Tue>
 ** firefox 相关扩展
 [[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_01.png?raw=true]]
 [[https://addons.mozilla.org/en-US/firefox/addon/s3menu-wizard/][Menu Wizard]] 是一个搭配[[https://github.com/mooz/keysnail/wiki][KeySnail]] 使用的扩展，本主题下使用它的目的是禁用firefox 默认的快捷键。
