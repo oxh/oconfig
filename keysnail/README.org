@@ -5,7 +5,7 @@
   1. [[https://github.com/oxh/oconfig/tree/master/keysnail#firefox-相关扩展][Firefox 相关扩展]]
   2. [[https://github.com/oxh/oconfig/tree/master/keysnail#keysnail-内置插件][KeySnail 内置插件]]
   3. [[https://github.com/oxh/oconfig/tree/master/keysnail#开始使用我的配置][开始使用我的配置]]
-  4. 
+  4. [[https://github.com/oxh/oconfig/tree/master/keysnail#个性化及理解][个性化及理解]] 
 + 比对食用 :: 这是关于该配置的我的本地信息
   + 文件名
     - ~/.keysnail.js
@@ -23,9 +23,37 @@
 ** KeySnail 内置插件
 [[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_03.png?raw=true]]
 
-这四个插件均在该配置文件用使用，也是实现 [[https://github.com/mooz/keysnail/wiki][KeySnail]] 一些基本功能的重要插件， [[https://github.com/mooz/keysnail/wiki/plugin][安装]] 这些插件很简单，不再赘述。
+这四个插件均在该配置文件用使用，也是实现 [[https://github.com/mooz/keysnail/wiki][KeySnail]] 的一些高级功能的重要插件， [[https://github.com/mooz/keysnail/wiki/plugin][安装]] 这些插件很简单，不再赘述。
 ** 开始使用我的配置
 只有单个配置文件，这一步比较简单。当然你也可以在线参照，为了照顾自己的感受，请先备份已存在的配置文件。
 : wget https://raw.githubusercontent.com/oxh/oconfig/master/keysnail/keysnail.js.bak
 : mv keysnail.js.bak ~/.keysnail.js
+然后你只需重新装载 KeySnail 的配置文件， [<f1> b] 即可看到所有的热键绑定。
 ** 个性化及理解
+配置的热键绑定比较符合 emacs 的用户习惯，还有很多热键需要你自己试验其效果,例如 [M-a a] [M-a b] [C-M-h] ,另外因为我的 <saps lock> 映射成 <ctrl> ，所以配置中有很多 <ctrl> 的绑定。
+先说一下我对 emacs 和 firefox 的理解，其中也是参照了一些前辈的说法。 \\
+其实 emacs 就是一个 lisp方言 的解释器。熟悉 emacs 的人都知道其可定制性很强，它的一个功能是一个函数，热键是调用函数的一种方式 。在 emacs 里，光标的左移都一个函数。所以别说加个脚踏板了，如果有廉价的眼球感应元件，你转转眼球就可以写代码了，自己感受，就不多说了。 \\
+而在 firefox 里貌似也是一回事，在配置文件中就是一个连续的热键调用一个函数的形式，所以你修改起来很容易。 \\
+#+BEGIN_SRC js
+key.setGlobalKey(['M-a', 'o'], function (ev) {
+    BrowserOpenTab();
+}, 'Open the new tab');
+
+key.setGlobalKey(['M-a', 'M-o'], function (ev) {
+    BrowserOpenTab();
+}, 'Open the new tab');
+
+key.setGlobalKey(['M-a', '2', 'b'], function (aEvent, aArg) {
+    var nthHistory = 2;
+    content.history.go(-1 * nthHistory);
+}, 'Back 2 pages');
+
+// ----模式---([热键]----{函  ====== //
+// ================================= //
+// 数}, '介绍');    ================ //
+
+// 模式主要是全局，浏览，编辑模式，基本满足需求，且比较合理。
+// 为什么存在多种热键调用同一个函数？
+// 因为在 gihthub， youtube， etc. 网站 <o> <k> 之类的单个键被吃了。
+#+END_SRC
+** 小聪明
