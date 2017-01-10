@@ -48,18 +48,18 @@ key.setGlobalKey(['M-a', 'o'], function (ev) {
     BrowserOpenTab();
 }, 'Open the new tab');
 
-key.setGlobalKey(['M-a', 'M-o'], function (ev) {
-    BrowserOpenTab();
-}, 'Open the new tab');
+key.setEditKey('C-h', function (ev) {
+    goDoCommand("cmd_deleteCharBackward");
+}, 'Delete backward char');
 
 key.setGlobalKey(['M-a', '2', 'b'], function (aEvent, aArg) {
     var nthHistory = 2;
     content.history.go(-1 * nthHistory);
 }, 'Back 2 pages');
 
-// ----模式---([热键]----{函  ====== //
-// ================================= //
-// 数}, '介绍');    ================ //
+// ===主模式====([热键]==========={  //
+// ==========函============数======= //
+// }, '介绍');    ================== //
 
 // 模式主要是全局，浏览，编辑模式，基本满足需求，且比较合理。
 // 为什么存在多种热键调用同一个函数？
