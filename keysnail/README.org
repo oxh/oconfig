@@ -1,5 +1,7 @@
+#+OPTIONS: toc:nil
+
 * KeySnail
-+ 自制目录 :: 由于GitHub上的README展示文档不支持目录,做了一个简单目录
++ 自制目录 :: 由于 GitHub 上的 README 展示文档不支持目录,做了一个简单目录
   1. [[https://github.com/oxh/oconfig/tree/master/keysnail#firefox-相关扩展][Firefox 相关扩展]]
   2. [[https://github.com/oxh/oconfig/tree/master/keysnail#keysnail-内置插件][KeySnail 内置插件]]
   3. [[https://github.com/oxh/oconfig/tree/master/keysnail#开始使用我的配置][开始使用我的配置]]
@@ -13,12 +15,11 @@
   + 更新时间
     - <2017-01-10 Tue>
 ** Firefox 相关扩展
-[[https://addons.mozilla.org/en-US/firefox/addon/s3menu-wizard/][Menu Wizard]] 是一个搭配[[https://github.com/mooz/keysnail/wiki][KeySnail]] 使用的扩展，本主题下使用它的目的是禁用firefox 默认的快捷键。设置很简单，如图所示。 \\
-[[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_01.png?raw=true]] \\
+[[https://addons.mozilla.org/en-US/firefox/addon/s3menu-wizard/][Menu Wizard]] 是一个搭配 [[https://github.com/mooz/keysnail/wiki][KeySnail]] 使用的扩展，本主题下使用它的目的是禁用 firefox 默认的快捷键。设置很简单，如图所示。 [[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_01.png?raw=true]]
 [[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_02.png?raw=true]]
 ** KeySnail 内置插件
 [[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_03.png?raw=true]] \\
-这四个插件均在该配置文件用使用，也是实现[[https://github.com/mooz/keysnail/wiki][KeySnail]] 一些基本功能的重要插件，[[https://github.com/mooz/keysnail/wiki/plugin][安装]] 这些插件很简单，不再赘述。
+这四个插件均在该配置文件用使用，也是实现 [[https://github.com/mooz/keysnail/wiki][KeySnail]] 一些基本功能的重要插件， [[https://github.com/mooz/keysnail/wiki/plugin][安装]] 这些插件很简单，不再赘述。
 ** 开始使用我的配置
 只有单个配置文件，这一步比较简单，当然你也可以在线参照。
 : wget https://raw.githubusercontent.com/oxh/oconfig/master/keysnail/keysnail.js.bak
