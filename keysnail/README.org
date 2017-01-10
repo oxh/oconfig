@@ -1,4 +1,6 @@
-#+OPTIONS: toc:2
+#+OPTIONS: toc:2  ^:nil author:nil num:2
+
+
 * KeySnail
 这是关于该配置的本地信息。
 + 环境
