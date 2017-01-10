@@ -6,6 +6,7 @@
   2. [[https://github.com/oxh/oconfig/tree/master/keysnail#keysnail-内置插件][KeySnail 内置插件]]
   3. [[https://github.com/oxh/oconfig/tree/master/keysnail#开始使用我的配置][开始使用我的配置]]
   4. [[https://github.com/oxh/oconfig/tree/master/keysnail#个性化及理解][个性化及理解]] 
+  5. [[https://github.com/oxh/oconfig/tree/master/keysnail#小聪明][小聪明]] 
 + 比对食用 :: 这是关于该配置的我的本地信息
   + 文件名
     - ~/.keysnail.js
@@ -65,3 +66,68 @@ key.setGlobalKey(['M-a', '2', 'b'], function (aEvent, aArg) {
 // 因为在 gihthub， youtube， etc. 网站 <o> <k> 之类的单个键被吃了。
 #+END_SRC
 ** 小聪明
+有段时间经常下种子，存在广告跳转的烦恼，往往回退一个页面不够，它立马又跳转回广告页面了。
+#+BEGIN_SRC js
+key.setGlobalKey(['M-a', '2', 'b'], function (aEvent, aArg) {
+    var nthHistory = 2;
+    content.history.go(-1 * nthHistory);
+}, 'Back 2 pages');
+
+key.setGlobalKey(['M-a', '3', 'b'], function (aEvent, aArg) {
+    var nthHistory = 3;
+    content.history.go(-1 * nthHistory);
+}, 'Back 3 pages');
+#+END_SRC
+这是把当前标签页左移一位、五位，右移同理， move right >> [M-a m r] 以及[M-a m 5 r]
+#+BEGIN_SRC js
+key.setGlobalKey(['M-a', 'm', 'l'], function (ev) {
+    let browser = getBrowser();
+    if (browser.mCurrentTab.nextSibling) {
+        browser.moveTabTo(browser.mCurrentTab, browser.mCurrentTab._tPos + 1);
+    } else {
+        browser.moveTabTo(browser.mCurrentTab, 0);
+    }
+}, 'Move selected tab to right');
+
+key.setGlobalKey(['M-a', 'm', '5', 'l'], function (ev) {
+    let browser = getBrowser();
+    if (browser.mCurrentTab.nextSibling) {
+        browser.moveTabTo(browser.mCurrentTab, browser.mCurrentTab._tPos + 5);
+    } else {
+        browser.moveTabTo(browser.mCurrentTab, 0);
+    }
+}, 'Move selected tab to right+5');
+#+END_SRC
+这是关闭当前标签页右边或者左边的所有标签页
+#+BEGIN_SRC js
+key.setGlobalKey(['C-x', 'k', 'r'], function (ev) {
+    let browser = getBrowser();
+    let tabs = browser.mTabContainer.childNodes;
+
+    for (var i = tabs.length - 1; tabs[i] != browser.selectedTab; i--)
+    browser.removeTab(tabs[i]);
+}, 'Close all tabs on right', true);
+
+key.setGlobalKey(['C-x', 'k', 'l'], function (ev) {
+    let browser = getBrowser();
+    let tabs = browser.mTabContainer.childNodes;
+
+    for (var i = tabs.length - 1; tabs[i] != browser.mCurrentTab; i--);
+
+    for (i--; i >= 0; i--)
+    browser.removeTab(tabs[i]);
+}, 'Close all tabs on left', true);
+#+END_SRC
+静音当前标签页
+#+BEGIN_SRC js
+key.setGlobalKey('C-M-m', function (ev) {
+    gBrowser.selectedTab.toggleMuteAudio();
+}, 'Mute tab');
+#+END_SRC
+编辑模式下 [C-h] ,因为习惯 cli 的操作方式，你没觉得 <backspace> 键离键盘核心区域太远了么。
+#+BEGIN_SRC js
+key.setEditKey('C-h', function (ev) {
+    goDoCommand("cmd_deleteCharBackward");
+}, 'Delete backward char');
+#+END_SRC
+还有很多，这里就不贴了，请 [<f1> b] 查看并自行测试。这些巧妙的函数，有些是原始配置文件就有的，有些是挖网三尺找的，有些是举一反三摸索出的。因为用的是 i3wm 加上浏览器也挺棒的，所以一般就不插鼠标的。那些 Gmail outlook 真心反人类，搞一些 vi 热键。
