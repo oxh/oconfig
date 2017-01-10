@@ -1,16 +1,20 @@
-#+OPTIONS: toc:2  ^:nil author:nil num:2
-
-
 * KeySnail
-这是关于该配置的本地信息。
-+ 环境
-  - linux 4.4.36
++ 自制目录 :: 由于GitHub上的README展示文档不支持目录,做了一个简单目录
+  1. [[https://github.com/oxh/oconfig/tree/master/keysnail#Firefox-相关扩展][Firefox 相关扩展]] :: 描述1
+  2. [[https://github.com/oxh/oconfig/tree/master/keysnail#KeySnail-内置插件][KeySnail 内置插件]] :: 描述2
+  3. [[https://github.com/oxh/oconfig/tree/master/keysnail#开始使用我的配置][开始使用我的配置]] :: 一二三2
+
+
+这是关于该配置的本地信息
++ 环境 :: 描述3
+  - linux 4.4.36 :: 描述5
   - firefox 50.1.0
 + 文件名
   - ~/.keysnail.js
 + 更新时间
   - <2017-01-10 Tue>
-** firefox 相关扩展
+
+** Firefox 相关扩展
 [[https://github.com/oxh/oconfig/raw/master/images/screenshots/screenshot_ff-keysnail_01.png?raw=true]]
 
 [[https://addons.mozilla.org/en-US/firefox/addon/s3menu-wizard/][Menu Wizard]] 是一个搭配[[https://github.com/mooz/keysnail/wiki][KeySnail]] 使用的扩展，本主题下使用它的目的是禁用firefox 默认的快捷键。
