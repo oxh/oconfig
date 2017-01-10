@@ -1,3 +1,4 @@
+#+OPTIONS: toc:2
 * KeySnail
 这是关于该配置的本地信息。
 + 环境
