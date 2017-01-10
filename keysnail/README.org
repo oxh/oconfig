@@ -22,3 +22,11 @@
 
 这四个插件均在该配置文件用使用，也是实现[[https://github.com/mooz/keysnail/wiki][KeySnail]] 一些基本功能的重要插件，[[https://github.com/mooz/keysnail/wiki/plugin][安装]] 这些插件很简单，不再赘述。
 ** 开始使用我的配置
+:wget https://raw.githubusercontent.com/oxh/oconfig/master/keysnail/keysnail.js.bak
+
+
+: wget https://raw.githubusercontent.com/oxh/oconfig/master/keysnail/keysnail.js.bak
+
+
+     : wget https://raw.githubusercontent.com/oxh/oconfig/master/keysnail/keysnail.js.bak
+
